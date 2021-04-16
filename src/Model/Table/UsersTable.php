@@ -13,4 +13,6 @@ class UsersTable extends Table{
         $this->hasMany('Comments'); //A User can have multiple Comments
         $this->hasMany('Friends'); // A User can have multiple Friends
     }
+
+
 }

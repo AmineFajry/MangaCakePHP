@@ -5,7 +5,7 @@
         <li>
             <?= $this->Html->link(
             'Acceuil',
-            ['controller' => 'Images', 'action' => 'index'],
+            ['controller' => 'Mangas', 'action' => 'index'],
             [
                 'class' => '',
                 'title' => 'HOME PAGE'
@@ -14,8 +14,8 @@
         </li>
         <li>
             <?= $this->Html->link(
-                'json',
-                ['controller' => 'Images', 'action' => 'display'],
+                'Friends',
+                ['controller' => 'Friends', 'action' => 'index'],
                 [
                     'class' => '',
                     'title' => 'img'
@@ -24,8 +24,8 @@
         </li>
         <li>
             <?= $this->Html->link(
-                'add',
-                ['controller' => 'Images', 'action' => 'add'],
+                'Mangas',
+                ['controller' => 'Mangas', 'action' => 'index'],
                 [
                     'class' => '',
                     'title' => 'other'

@@ -45,46 +45,33 @@ use Cake\Routing\RouteBuilder;
 $routes->setRouteClass(DashedRoute::class);
 
 $routes->scope('/', function (RouteBuilder $builder) {
-    /*
-     * Here, we are connecting '/' (base path) to a controller called 'Pages',
-     * its action called 'display', and we pass a param to select the view file
-     * to use (in this case, templates/Pages/home.php)...
-     */
-    $builder->connect('/', ['controller' => 'Users', 'action' => 'login', 'home']);
+ 
+    $builder->connect('/', ['controller' => 'Mangas', 'action' => 'index', 'home']);
 
-    /*
-     * ...and connect the rest of 'Pages' controller's URLs.
-     */
+    $builder->connect('/signin', ['controller' => 'Users', 'action' => 'signin']);
+    
+    $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
+    
+    $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
+
+
+    $builder->connect('/mangas/delete', ['controller' => 'Mangas', 'action' => 'delete']);
+    $builder->connect('/mangas/delete/:id', ['controller' => 'Mangas', 'action' => 'delete'],['pass' => ['id']]);
+
+    $builder->connect('/friends/delete', ['controller' => 'Friends', 'action' => 'delete']);
+    $builder->connect('/friends/delete/:id', ['controller' => 'Friends', 'action' => 'delete'],['pass' => ['id']]);
+
+    $builder->connect('/manga', ['controller' => 'Mangas', 'action' => 'show']);
+    $builder->connect('/manga/:id', ['controller' => 'Mangas', 'action' => 'show'],['pass' => ['id']]);
+
+    
+    $builder->connect('/friend', ['controller' => 'Friends', 'action' => 'show']);
+    $builder->connect('/friend/:id', ['controller' => 'Friends', 'action' => 'show'],['pass' => ['id']]);
+
     $builder->connect('/pages/*', 'Pages::display');
 
-    /*
-     * Connect catchall routes for all controllers.
-     *
-     * The `fallbacks` method is a shortcut for
-     *
-     * ```
-     * $builder->connect('/:controller', ['action' => 'index']);
-     * $builder->connect('/:controller/:action/*', []);
-     * ```
-     *
-     * You can remove these routes once you've connected the
-     * routes you want in your application.
-     */
+
     $builder->fallbacks();
 });
 
-/*
- * If you need a different set of middleware or none at all,
- * open new scope and define routes there.
- *
- * ```
- * $routes->scope('/api', function (RouteBuilder $builder) {
- *     // No $builder->applyMiddleware() here.
- *     
- *     // Parse specified extensions from URLs
- *     // $builder->setExtensions(['json', 'xml']);
- *     
- *     // Connect API actions here.
- * });
- * ```
- */
+

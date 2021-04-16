@@ -39,15 +39,25 @@ footer {
    padding-top: 50px;
 }
 
-.img-home{
-  max-width: 50vw;
-  max-height: 25vh;
+.card{
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: #b1b1b1;
+  width: 25vw;
+  height: 50vh;
   border-radius: 10px;
-  transition:  1s;
+  
+  overflow: hidden;
 }
-.img-home:hover{
-  transform: scale(2);
-  border-radius: 0px;
+.card article{
+  
+  overflow: hidden;
+}
+.img-home{
+  max-width: 24vw;
+  max-height: 24vh;
+  border-radius: 10px;
 }
 .img-show{
   max-width: 50%;

@@ -1,13 +1,13 @@
-<p>
+<div class="marg_up">
     <?= $this->Html->link(
         'add Friends',
         ['controller' => 'Friends', 'action' => 'add'],
         [
-            'class' => '',
+            'class' => 'nice_button',
             'title' => 'other'
         ]
     ) ?>
-</p>
+</div>
 
 
 <ul
@@ -21,16 +21,16 @@
 
 
     <?php
-        foreach($friends as $lineObject){
-            $slugNameLine = $lineObject['slug_full_name']??'anonymous';
-            $nameLine = $lineObject['full_name']??'anonymous';
-            $descriptionLine = $lineObject['description']??'pas de description';
+    foreach($friends as $lineObject){
+        $slugNameLine = $lineObject['slug_full_name']??'anonymous';
+        $nameLine = $lineObject['full_name']??'anonymous';
+        $descriptionLine = $lineObject['description']??'pas de description';
 
 
 
 
-            echo $this->Html->link(
-                "<li class='card'>
+        echo $this->Html->link(
+            "<li class='card'>
                     <article>
                         <h2>
                             $nameLine
@@ -39,11 +39,11 @@
                         {$this->Html->image(
 
                             'friends_img/'.$slugNameLine.'.jpg',
-    
+
                             array(
-    
+
                                 'style'=>'',
-    
+
                                 'class'=> 'img-home',
                             )
                         )}
@@ -54,20 +54,20 @@
                         <p>
                             $descriptionLine
                         </p>
-                        
+
                     </article>
                 </li>",
-                array(
-                    'controller'=>'Friends',
-                    'action'=>'show',
-                    '/'.$slugNameLine 
-                ),
-                array(
-                    'escape'=> false
-                )
-            );
-        }
+            array(
+                'controller'=>'Friends',
+                'action'=>'show',
+                '/'.$slugNameLine
+            ),
+            array(
+                'escape'=> false
+            )
+        );
+    }
 
-        
+
     ?>
 </ul>

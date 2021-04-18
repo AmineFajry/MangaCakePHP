@@ -24,9 +24,9 @@ class UsersController extends AppController
     {
         parent::initialize();
         $this->Authentication->allowUnauthenticated(['login', 'signin']);
-        
+
     }
-    
+
     public function login(){
         $userEntity = $this->Users->newEmptyEntity();
 
@@ -38,7 +38,7 @@ class UsersController extends AppController
         }
 
         if ($this->request->is('post') && !$result->isValid()) {
-            
+
             $this->Flash->error('mot de passe non valide');
         }
 
@@ -48,9 +48,9 @@ class UsersController extends AppController
     public function logout(){
 
         $this->Authentication->logout();
-        
+
         $this->Flash->error('Vous vous êtes doconnecté');
-        
+
         return $this->redirect('/');
 
     }
@@ -58,18 +58,27 @@ class UsersController extends AppController
     public function signin(){
 
 
-        
-        $user = ['email' => 'admin@gmail.com', 'password' => 'admin'];
-        
-        $userEntity = $this->Users->newEntity($user);
 
-        $this->Users->save($userEntity);
+        $userEntity = $this->Users->newEmptyEntity();
 
-        $this->Flash->success("yes c'est bon !!!");
-        
-        return $this->redirect($this->referer());
+        if ($this->request->is('post')) {
 
-        
+
+            $this->Users->patchEntity($userEntity, $this->request->getData());
+
+            if($this->Users->save($userEntity)){
+                $this->Flash->success("yes c'est bon !!!");
+                return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+            }else{
+                $this->Flash->error("Une erreur est survenu lors de l'upload !");
+            }
+
+        }
+
+
+
+        $this->set(compact('userEntity'));
+
 
     }
 }

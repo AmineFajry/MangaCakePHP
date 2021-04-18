@@ -1,102 +1,102 @@
 /* on retire les marge basic, des fois c pas top */
 *{
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 html{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color:#ddd;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color:#ddd;
 }
 header{
-  position: relative;
-  width: 100%;
-  }
+    position: relative;
+    width: 100%;
+}
 main{
-  position: relative;
-  width: 100%;
-  min-height: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
 }
 footer {
-   position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #303030;
-   color: white;
-   text-align: center;
-   padding-bottom: 50px;
-   padding-top: 50px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #303030;
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .card{
-  padding: 5px;
-  text-decoration: none;
-  color: black;
-  background-color: #b1b1b1;
-  width: 25vw;
-  height: 50vh;
-  border-radius: 10px;
-  
-  overflow: hidden;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    background-color: #b1b1b1;
+    width: 25vw;
+    height: 50vh;
+    border-radius: 10px;
+
+    overflow: hidden;
 }
 .card article{
-  
-  overflow: hidden;
+
+    overflow: hidden;
 }
 .img-home{
-  max-width: 24vw;
-  max-height: 24vh;
-  border-radius: 10px;
+    max-width: 24vw;
+    max-height: 24vh;
+    border-radius: 10px;
 }
 .img-show{
-  max-width: 50%;
-  max-height: 25%;
+    max-width: 50%;
+    max-height: 25%;
 }
 .button{
-  display: block;
+    display: block;
 }
 
 .UTILISATION{
-  font-size: 10px;
-  text-align: right;
-  color: #909090;
-  right: 0;
-  bottom: 0;
+    font-size: 10px;
+    text-align: right;
+    color: #909090;
+    right: 0;
+    bottom: 0;
 }
 
 .flash{
-  position:absolute;
-  top: 9vh;
-  right: 50%;
-  width: 70%;
-  transform: translateX(50%);
-  border: 2px solid #303030;
-  border-radius: 4px;
-  text-align: center;
+    position:absolute;
+    top: 9vh;
+    right: 50%;
+    width: 70%;
+    transform: translateX(50%);
+    border: 2px solid #303030;
+    border-radius: 4px;
+    text-align: center;
 }
 .flash-info {
-  top: 15vh;
-  background-color: #6bd5ffda;
+    top: 15vh;
+    background-color: #6bd5ffda;
 }
 .flash-success {
-  background-color: #38ff59e7;
+    background-color: #38ff59e7;
 }
 .flash-error{
-  background-color: #f05959e3;
+    background-color: #f05959e3;
 }
 .hidden{
-  display: none;
+    display: none;
 }
 
 
@@ -104,37 +104,40 @@ footer {
 
 
 .align-center{
-  text-align: center;
+    text-align: center;
 }
 .super-align-center{
-  text-align: center;
-  margin-top: 5%;
+    text-align: center;
+    margin-top: 5%;
 }
 .mini-padd-up{
-  padding-top:30px;
+    padding-top:30px;
 }
 .content-classique-marg *{
-  margin: 5px;
+    margin: 5px;
 }
 .nice-border-rounded{
-  border: 2px solid #555;
-  border-radius: 4px;
+    border: 2px solid #555;
+    border-radius: 4px;
 }
 .nice_button{
-  text-align: center;
-  text-decoration: none;
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-  border-radius: 4px;
-  padding: 15px 32px;
-  transition: background-color 1s;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    padding: 15px 32px;
+    transition: background-color 1s;
 }
 
 .nice_button:hover{
     background-color: #555555;
-  color: white;
-  
+    color: white;
+
+}
+.marg_up{
+    margin-top: 20px;
 }
 
 
@@ -142,113 +145,122 @@ footer {
 
 /* NAV BAR--------------------------------------------------------------------------*/
 nav{
-  width: 100%;
+    width: 100%;
 }
 .nav-acceuil{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #303030;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
 }
 .nav-acceuil nav {
-  top: 30%;
-  position: relative;
+    top: 30%;
+    position: relative;
 }
 .nav-acceuil nav ul{
-  overflow: hidden;
-  width: 100%;
+    overflow: hidden;
+    width: 100%;
 }
 
 
 nav ul {
-  overflow: hidden;
-  margin: 0; /* je retire la mini marge moche */
-  padding: 0;
-  background-color: #303030;
+    overflow: hidden;
+    margin: 0; /* je retire la mini marge moche */
+    padding: 0;
+    background-color: #303030;
 }
 
 
-nav ul li:not(:first-child) {
-  display: block;
-  float: left;
+nav ul li {
+    display: block;
+    float: left;
 }
+
+.floatRight{
+    float:right;
+}
+
+
+
+
 nav ul li:first-child {
-  display: none;
-  float: none;
+    display: none;
+    float: none;
 }
 .nav-acceuil nav ul li:first-child{
-  display: block;
-  float: none;
+    display: block;
+    float: none;
 }
-.nav-acceuil nav ul li:not(:first-child) {
-  display: block;
-  float: none;
+.nav-acceuil nav ul li {
+    display: block;
+    float: none;
 }
 
 nav ul li a {
-  text-decoration: none; /* retir les tiret des ul et li */
-  color: white; /*couleur d'écriture */
-  display: block;/* les determine comme block */
-  text-align: center; /* aligne au centre, c mieux */
-  padding: 14px 16px; /* c la marge pour faire la taille du "bouton" */
-  transition-duration: 0.5s;
+    text-decoration: none; /* retir les tiret des ul et li */
+    color: white; /*couleur d'écriture */
+    display: block;/* les determine comme block */
+    text-align: center; /* aligne au centre, c mieux */
+    padding: 14px 16px; /* c la marge pour faire la taille du "bouton" */
+    transition-duration: 0.5s;
 }
 nav ul li a:hover {
-  background-color: #404040;
+    background-color: #404040;
 }
 
 nav ul li label{
-  text-decoration: none; /* retir les tiret des ul et li */
-  color: white; /*couleur d'écriture */
-  display: block;/* les determine comme block */
-  text-align: center; /* aligne au centre, c mieux */
-  padding: 14px 16px; /* c la marge pour faire la taille du "bouton" */
+    text-decoration: none; /* retir les tiret des ul et li */
+    color: white; /*couleur d'écriture */
+    display: block;/* les determine comme block */
+    text-align: center; /* aligne au centre, c mieux */
+    padding: 14px 16px; /* c la marge pour faire la taille du "bouton" */
 }
 
 nav ul li input{
-  display: none;
+    display: none;
 }
+
 
 
 /*dropdown nav bar ----------------------*/
 .dropdown{
-  position: relative;
+    position: relative;
 }
 .dropdown ul {
-  position: absolute;
-  z-index: 5;
-  margin-top: none; /* je retire la mini marge moche */
-  animation: 0s linear 0s mask-it; /* Une animation pour masquer */
-  top:200px; /* J'indique l'état dans lequel être à la fin de l'animation */
-  opacity: 0;
-  left: 0;
-  width: auto;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  text-align: center;
+    position: absolute;
+    z-index: 5;
+    margin-top: none; /* je retire la mini marge moche */
+    animation: 0s linear 0s mask-it; /* Une animation pour masquer */
+    top:200px; /* J'indique l'état dans lequel être à la fin de l'animation */
+    opacity: 0;
+    left: 0;
+    width: auto;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    text-align: center;
 }
 
 .dropdown:hover ul{
-     animation: 0.5s linear 0s deploy; /* Une autre pour afficher */
-     top: 46px;  /* J'indique l'état dans lequel être à la fin de l'animation */
-     opacity: 1;
+    animation: 0.5s linear 0s deploy; /* Une autre pour afficher */
+    top: 46px;  /* J'indique l'état dans lequel être à la fin de l'animation */
+    opacity: 1;
 }
 
 
 #check1:checked ~ ul {
-     animation: 0.5s linear 0s deploy; /* Une autre pour afficher */
-     top: 46px;  /* J'indique l'état dans lequel être à la fin de l'animation */
-     opacity: 1;
+    animation: 0.5s linear 0s deploy; /* Une autre pour afficher */
+    top: 46px;  /* J'indique l'état dans lequel être à la fin de l'animation */
+    opacity: 1;
 }
 nav ul li ul li{
-  background-color: #fff;
-  float: none;
+    background-color: #fff;
+    float: none;
 }
 
 nav ul li ul a {
-      color: black;
-      text-decoration: none;
+    color: black;
+    text-decoration: none;
     text-align: center;
     transition-duration: 0.5s;
 }
@@ -263,31 +275,31 @@ nav ul li ul a:hover {
 }
 
 @keyframes deploy{
-  0%{
-    top: -200px;
-    opacity: 0;
-  }
-  1%{
-    top: 46px;
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+    0%{
+        top: -200px;
+        opacity: 0;
+    }
+    1%{
+        top: 46px;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 @keyframes mask-it{
-  0%{
-    opacity: 1;
-    top: 46px;
-  }
-  99%{
-    opacity: 0;
-    top: 46px;
-  }
-  100%{
-    top: -200px;
-  }
+    0%{
+        opacity: 1;
+        top: 46px;
+    }
+    99%{
+        opacity: 0;
+        top: 46px;
+    }
+    100%{
+        top: -200px;
+    }
 }
 
 
@@ -298,8 +310,8 @@ nav ul li ul a:hover {
 
 
 #check-responsiv-nav:checked + ul li{
-  display: block;
-  float: none;
+    display: block;
+    float: none;
 }
 
 
@@ -327,26 +339,26 @@ nav ul li ul a:hover {
 /* RESPONSSIVE PART -----------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
 @media screen and (max-width: 600px) {
-  nav ul li {
-  float: none;
-  }
+    nav ul li {
+        float: none;
+    }
 
-  nav ul li:not(:first-child) {
-    display: none;
-    float: none;
-  }
-  nav ul li:first-child {
-    display: block;
-    float: none;
-  }
+    nav ul li:not(:first-child) {
+        display: none;
+        float: none;
+    }
+    nav ul li:first-child {
+        display: block;
+        float: none;
+    }
     .nav-acceuil nav ul li:first-child{
-    display: block;
-    float: none;
-  }
-  .nav-acceuil nav ul li:not(:first-child) {
-    display: block;
-    float: none;
-  }
+        display: block;
+        float: none;
+    }
+    .nav-acceuil nav ul li:not(:first-child) {
+        display: block;
+        float: none;
+    }
 
 
 }

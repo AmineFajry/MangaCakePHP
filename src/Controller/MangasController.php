@@ -105,14 +105,6 @@ class MangasController extends AppController
         if($manga_slug_name != null){
             $mangaEntity = $this->Mangas->find()->where(['slug_name' => $manga_slug_name])->contain(['Comments'])->contain(['Friends'])->firstOrFail();
 
-
-            /*foreach ($mangaEntity->friends as $friend)
-            {
-                $friendsTab[] = $friend->slug_full_name;
-
-            }*/
-            
-
             $this->set(compact('mangaEntity'));
         }
 

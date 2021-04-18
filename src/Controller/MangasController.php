@@ -28,7 +28,14 @@ class MangasController extends AppController
     public function index(){
 
         $mangas = $this->Mangas->find()->all();
-        $this->set(compact('mangas'));
+
+        $authors = ["all", "pierre", "amine", "bob"];
+        $types = ["all", "action", "aventure", "fantaisy"];
+
+
+
+
+        $this->set(compact('mangas', 'authors', 'types'));
 
     }
 

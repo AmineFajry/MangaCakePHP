@@ -99,17 +99,21 @@ class FriendsController extends AppController
     }
 
     public function send($id){
-        $data = [
-            'manga_id' => $id,
-            'id_user' => '1',
-            'favoris' => $this->getRequest()->getData('favoris')
-        ];
+        $friendID = $this->request->getQuery('$friendID');
 
-        $friendEntity = $this->Friends->newEntity($data);
-        if($this->Friends->save($friendEntity)){
-            $this->Flash->success("ok");
-        }else{
-            $this->Flash->error("pas ok");
+        if ( $friendID != null) {
+            $data = [
+                'manga_id' => $id,
+                'favoris' => $this->getRequest()->getData('favoris'),
+                'slug_full_name' => $this->Friends->find()->where(['slug_full_name' => $friendID])->firstOrFail()
+            ];
+
+            $friendEntity = $this->Friends->newEntity($data);
+            if ($this->Friends->save($friendEntity)) {
+                $this->Flash->success("ok");
+            } else {
+                $this->Flash->error("pas ok");
+            }
         }
 
         return $this->redirect($this->referer());

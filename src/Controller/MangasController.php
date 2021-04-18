@@ -28,14 +28,7 @@ class MangasController extends AppController
     public function index(){
 
         $mangas = $this->Mangas->find()->all();
-
-        $authors = ["all", "pierre", "amine", "bob"];
-        $types = ["all", "action", "aventure", "fantaisy"];
-
-
-
-
-        $this->set(compact('mangas', 'authors', 'types'));
+        $this->set(compact('mangas'));
 
     }
 
@@ -110,8 +103,15 @@ class MangasController extends AppController
     public function show($manga_slug_name=null){
 
         if($manga_slug_name != null){
+            $mangaEntity = $this->Mangas->find()->where(['slug_name' => $manga_slug_name])->contain(['Comments'])->contain(['Friends'])->firstOrFail();
 
-            $mangaEntity = $this->Mangas->find()->where(['slug_name' => $manga_slug_name])->firstOrFail();
+
+            /*foreach ($mangaEntity->friends as $friend)
+            {
+                $friendsTab[] = $friend->slug_full_name;
+
+            }*/
+            
 
             $this->set(compact('mangaEntity'));
         }

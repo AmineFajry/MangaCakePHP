@@ -111,8 +111,7 @@ class MangasController extends AppController
                 $friendsTab[] = $friend->slug_full_name;
 
             }*/
-
-            dd($mangaEntity->friends);
+            
 
             $this->set(compact('mangaEntity'));
         }

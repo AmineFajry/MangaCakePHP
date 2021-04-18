@@ -10,7 +10,7 @@ class FriendsTable extends Table{
     {
         parent::initialize($config);
         $this->belongsTo('Users'); // Many Friends belongs to a User
-        $this->belongsTo('Mangas');
+        $this->hasMany('Mangas');
     }
 
 

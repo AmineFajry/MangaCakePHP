@@ -71,15 +71,6 @@ endforeach;
 
 <?= $this->Form->create(null,['url' => ['controller' => 'Friends','action' => 'send' , $mangaEntity->id]]) ?>
 
-<?php
-echo "
-
-
-{$this->Form->select('field', $friendsTab,['label' => 'types : '])}
-";
-
-?>
-
 <?= $this->Form->control('favoris', ['label' => 'Favoris to Friends: ']) ?>
 <?= $this->Form->button('send') ?>
 <?= $this->Form->end() ?>

@@ -45,13 +45,13 @@ use Cake\Routing\RouteBuilder;
 $routes->setRouteClass(DashedRoute::class);
 
 $routes->scope('/', function (RouteBuilder $builder) {
- 
+
     $builder->connect('/', ['controller' => 'Mangas', 'action' => 'index', 'home']);
 
     $builder->connect('/signin', ['controller' => 'Users', 'action' => 'signin']);
-    
+
     $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
-    
+
     $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
 
 
@@ -64,7 +64,10 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->connect('/manga', ['controller' => 'Mangas', 'action' => 'show']);
     $builder->connect('/manga/:id', ['controller' => 'Mangas', 'action' => 'show'],['pass' => ['id']]);
 
-    
+    $builder->connect('/json', ['controller' => 'Mangas', 'action' => 'json']);
+    $builder->connect('/json/:id', ['controller' => 'Mangas', 'action' => 'json'],['pass' => ['id']]);
+
+
     $builder->connect('/friend', ['controller' => 'Friends', 'action' => 'show']);
     $builder->connect('/friend/:id', ['controller' => 'Friends', 'action' => 'show'],['pass' => ['id']]);
 

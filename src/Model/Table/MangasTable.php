@@ -13,5 +13,7 @@ class MangasTable extends Table{
         $this->hasMany('Genres'); //Manga can have multiple Genres
         $this->hasMany('Authors'); //Manga has many authors
         $this->hasMany('Comments'); //Manga can have multiple Comments
+        $this->hasMany('Friends');
+
     }
 }

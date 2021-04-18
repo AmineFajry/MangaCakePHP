@@ -24,34 +24,28 @@ class FriendsController extends AppController
     }
 
     public function index(){
-        
+
         $friends = $this->Friends->find()->all();
         $this->set(compact('friends'));
-
     }
 
     public function add(){
-   
         $friendEntity = $this->Friends->newEmptyEntity();
 
         if ($this->request->is('post')) {
-            
+
             $uploadPath = WWW_ROOT ."img/friends_img/";
 
             $friend_slug_name = Text::slug($this->request->getData('first_name').'-'.$this->request->getData('last_name'));
             $friendEntity->slug_full_name = $friend_slug_name;
-            
+
             $fileobject = $this->request->getData('submittedfile');
             $clientObject = $friendEntity->slug_full_name . '.jpg';
-            
-            
-            
-            
+
 
             $destination = $uploadPath . $clientObject;
 
-            
-            
+
 
             if($clientObject == null){
 
@@ -78,10 +72,8 @@ class FriendsController extends AppController
 
 
 
-     
-        
         $this->set(compact('friendEntity'));
-        
+
     }
 
     public function delete($id=null){
@@ -96,12 +88,33 @@ class FriendsController extends AppController
     }
 
     public function show($friend_slug_full_name=null){
-        
+
         if($friend_slug_full_name != null){
 
             $friendEntity = $this->Friends->find()->where(['slug_full_name' => $friend_slug_full_name])->firstOrFail();
-            
+
+
             $this->set(compact('friendEntity'));
         }
     }
+
+    public function send($id){
+        $data = [
+            'manga_id' => $id,
+            'id_user' => '1',
+            'favoris' => $this->getRequest()->getData('favoris')
+        ];
+
+        $friendEntity = $this->Friends->newEntity($data);
+        if($this->Friends->save($friendEntity)){
+            $this->Flash->success("ok");
+        }else{
+            $this->Flash->error("pas ok");
+        }
+
+        return $this->redirect($this->referer());
+
+    }
+
+
 }

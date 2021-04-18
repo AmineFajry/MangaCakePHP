@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 use App\Controller\AppController;
+use Cake\Utility\Text;
 
 
 class CommentsController extends AppController
@@ -19,4 +20,24 @@ class CommentsController extends AppController
         dd($comments);
 
     }
+
+
+    public function add($id){
+        $data = [
+            'manga_id' => $id,
+            'content' => $this->getRequest()->getData('content')
+        ];
+
+        $commentEntity = $this->Comments->newEntity($data);
+        if($this->Comments->save($commentEntity)){
+            $this->Flash->success("ok");
+        }else{
+            $this->Flash->error("pas ok");
+        }
+        $this->set(compact('commentEntity'));
+
+        return $this->redirect($this->referer());
+
+    }
+
 }

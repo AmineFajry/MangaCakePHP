@@ -14,6 +14,8 @@
 
         {$this->Form->control('name', ['label' => 'Name : '])}
 
+        {$this->Form->control('age_conseille', ['label' => 'Age conseillé : '])}
+
         {$this->Form->control('description', ['label' => 'Description : '])}
 
         {$this->Form->button('Submit')}

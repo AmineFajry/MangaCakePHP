@@ -32,6 +32,21 @@
                 ]
             ) ?>
         </li>
+        <li>
+            <?= $this->Html->link(
+                'JSON',
+                array(
+                    'controller'=>'Mangas',
+                    'action'=>'json',
+                    '?limit=100&name='
+                ),
+                array(
+                    'class' => '',
+                    'title' => 'json part'
+                )
+
+            ) ?>
+        </li>
     </ul>
 </nav>
 
